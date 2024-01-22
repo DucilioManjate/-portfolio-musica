@@ -1,32 +1,18 @@
-import React, { ReactNode } from "react";
-import Link from "next/link";
-import Head from "next/head";
 
-type Props = {
-  children?: ReactNode;
-  title?: string;
-};
+import React from 'react';
 
-const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
+const Layout: React.FC = ({ children }) => {
+  return (
+    <div>
       <nav>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
-        <Link href="/users">Users List</Link> |{" "}
-        <a href="/api/users">Users API</a>
+        {/* Coloque sua barra de navegação aqui */}
       </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
-);
+      <main>{children}</main>
+      <footer>
+        {/* Coloque seu rodapé aqui */}
+      </footer>
+    </div>
+  );
+};
 
 export default Layout;

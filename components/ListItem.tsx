@@ -1,16 +1,18 @@
-import React from "react";
-import Link from "next/link";
+// components/ListItem.tsx
+import React from 'react';
+import { YourMusicData } from '../interfaces';
 
-import { User } from "../interfaces";
+interface ListItemProps {
+  data: YourMusicData;
+}
 
-type Props = {
-  data: User;
+const ListItem: React.FC<ListItemProps> = ({ data }) => {
+  return (
+    <li>
+      <h3>{data.title}</h3>
+      <p>{data.artist}</p>
+    </li>
+  );
 };
-
-const ListItem = ({ data }: Props) => (
-  <Link href="/users/[id]" as={`/users/${data.id}`}>
-    {data.id}:{data.name}
-  </Link>
-);
 
 export default ListItem;

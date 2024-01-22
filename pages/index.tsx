@@ -1,13 +1,18 @@
-import Link from "next/link";
-import Layout from "../components/Layout";
+// pages/index.tsx
+import React from 'react';
+import Layout from '../components/Layout';
+import List from '../components/List';
+import { getYourMusicData } from '../utils/sample-data';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
-  </Layout>
-);
+const Home: React.FC = () => {
+  const yourMusicData = getYourMusicData();
 
-export default IndexPage;
+  return (
+    <Layout>
+      <h1>Últimos Lançamentos</h1>
+      <List data={yourMusicData} />
+    </Layout>
+  );
+};
+
+export default Home;

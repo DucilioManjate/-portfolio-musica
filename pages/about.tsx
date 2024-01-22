@@ -1,14 +1,14 @@
-import Link from "next/link";
-import Layout from "../components/Layout";
+// pages/about.tsx
+import React from 'react';
+import Layout from '../components/Layout';
 
-const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>This is the about page</p>
-    <p>
-      <Link href="/">Go home</Link>
-    </p>
-  </Layout>
-);
+const About: React.FC = () => {
+  return (
+    <Layout>
+      <h1>Sobre Mim</h1>
+      {/* Adicione detalhes sobre você */}
+    </Layout>
+  );
+};
 
-export default AboutPage;
+export default About;

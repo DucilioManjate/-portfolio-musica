@@ -1,9 +1,10 @@
-import { User } from "../interfaces";
+// utils/sample-data.ts
+import { YourMusicData } from '../interfaces';
 
-/** Dummy user data. */
-export const sampleUserData: User[] = [
-  { id: 101, name: "Alice" },
-  { id: 102, name: "Bob" },
-  { id: 103, name: "Caroline" },
-  { id: 104, name: "Dave" },
-];
+export const getYourMusicData = (): YourMusicData[] => {
+  return [
+    { id: 1, title: 'Música 1', artist: 'Artista 1' },
+    { id: 2, title: 'Música 2', artist: 'Artista 2' },
+    // Adicione mais dados conforme necessário
+  ];
+};
