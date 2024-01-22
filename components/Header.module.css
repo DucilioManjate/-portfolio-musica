@@ -1,0 +1,83 @@
+/* components/Header.module.css */
+
+/* Reset de estilos para garantir consistência entre navegadores */
+.resetStyles,
+.resetStyles:before,
+.resetStyles:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* Estilo para telas menores (max-width: 767px) */
+@media (max-width: 767px) {
+    .header-top {
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+/* Seu estilo para telas maiores */
+.header {
+    position: relative;
+    width: 100%;
+    background-color: #2b0070;
+    height: 80px;
+    line-height: 80px;
+    z-index: 100;
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    margin: 0;
+    padding: 0;
+}
+
+/* Adicione a regra de font-face para a fonte desejada */
+@font-face {
+    font-family: 'The Jacatra';
+    src: url('/fonts/THE_JACATRA.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilo para seus links */
+.navLink {
+    font-family: 'The Jacatra', sans-serif;
+    /* Outros estilos para o texto */
+    color: #011F5B; /* Nova cor combinando com o fundo */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem; /* Tamanho aumentado */
+    margin: 0 10px; /* Espaçamento entre os textos */
+    transition: color 0.3s, font-size 0.3s; /* Adicionando transição para animação */
+}
+
+/* Hover animado */
+.navLink:hover {
+    color: #fff; /* Cor ao passar o mouse */
+    font-size: 1.3rem; /* Tamanho ao passar o mouse */
+}
+
+/* Restante do seu arquivo CSS */
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #011F5B;
+    color: #fff;
+    padding: 1rem;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
